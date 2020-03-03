@@ -10,6 +10,19 @@
     clear: both;
 }
 
+.bg-color-lightgray {
+    background-color: #f7f7f7;
+}
+
+.icon-size {
+    font-size: 20px;
+}
+
+.icon-color-gray {
+    color: gray;
+    opacity: 0.5;
+}
+
 body {
 
 }
@@ -17,7 +30,7 @@ body {
 .container {
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(to bottom, #2fa18e 0%, #2fa18e 10%, lightgray 10%, lightgray 100%);
+    background-image: linear-gradient(to bottom, #2fa18e 0%, #2fa18e 15%, lightgray 15%, lightgray 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,15 +46,54 @@ body {
 }
 
 #app-left {
-    width: 34%;
+    width: 40%;
     height: 100%;
     background-color: yellow;
     float: left;
 }
 
 #app-right {
-    width: 66%;
+    width: 60%;
     height: 100%;
     background-color: red;
     float: left;
+}
+
+#user {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#user-profile-icon {
+    border-radius: 50%;
+}
+
+#user-profile-icon img {
+    height: 50px;
+    width: 50px;
+}
+
+#user-action-icons {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-action-icons i {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#notifiche-messaggio {
+    height: 80px;
+    background-color: cyan;
+}
+
+#cerca-chat {
+    height: 50px;
+    background-color: green;
 }
