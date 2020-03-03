@@ -5,20 +5,22 @@
 }
 
 body {
+
+}
+
+.container {
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(to bottom, #2fa18e 0%, #2fa18e 10%, lightgray 10%, lightgray 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
-#bg-top {
-    height: 20vh;
-    width: 100vw;
-    background-color: green;
-}
-
-#bg-bottom {
-    height: 80vh;
-    width: 100vw;
-    background-color: blue;
+#messageApp {
+    width: 80vw;
+    height: 95vh;
+    background-color: pink;
 }
