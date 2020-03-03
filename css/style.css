@@ -3,3 +3,22 @@
     border: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, #2fa18e 0%, #2fa18e 10%, lightgray 10%, lightgray 100%);
+
+}
+
+#bg-top {
+    height: 20vh;
+    width: 100vw;
+    background-color: green;
+}
+
+#bg-bottom {
+    height: 80vh;
+    width: 100vw;
+    background-color: blue;
+}
