@@ -213,6 +213,33 @@ body {
     padding-top: 5px;
 }
 
-.message-received {
+/* COMINCIA APP RIGHT SIDE */
 
+/* COMINCIA TOP BAR */
+
+#top-bar {
+    height: 60px;
+    background-color: yellow;
 }
+
+/* FINE TOP BAR */
+
+/* COMINCIA CHAT LOG */
+
+#chat-log {
+    height: calc(95vh - 120px);
+    background-color: pink;
+}
+
+/* FINE CHAT LOG */
+
+/* COMINCIA SEND MESSAGE */
+
+#send-message {
+    height: 60px;
+    background-color: blue;
+}
+
+/* FINE SEND MESSAGE */
+
+/* FINE APP RIGHT SIDE */
