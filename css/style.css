@@ -83,7 +83,6 @@ body {
 #app-right {
     width: 60%;
     height: 100%;
-    background-color: red;
     float: left;
 }
 
@@ -105,7 +104,6 @@ body {
 }
 
 #user-action-icons {
-    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,8 +217,30 @@ body {
 
 #top-bar {
     height: 60px;
-    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#friend-status {
+    display: flex;
+    align-items: center;
+}
+
+#friend-status .friend-avatar {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#top-bar-icons {
+    display: flex;
+}
+
+#top-bar-icons i {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 /* FINE TOP BAR */
 
@@ -238,6 +258,10 @@ body {
 #send-message {
     height: 60px;
     background-color: blue;
+}
+
+#friend-status {
+    display: flex;
 }
 
 /* FINE SEND MESSAGE */
