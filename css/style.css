@@ -72,8 +72,7 @@ body {
 
 #app-left {
     width: 40%;
-    height: 100%;
-    background-color: yellow;
+
     float: left;
 }
 
@@ -96,7 +95,7 @@ body {
     border-radius: 50%;
 }
 
-#user-profile-icon img {
+.avatar-size {
     height: 50px;
     width: 50px;
 }
@@ -177,4 +176,16 @@ body {
 #search-friends::placeholder {
     color: lightgray;
     font-size: 9px;
+}
+
+.friend-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    border-top: 1px solid #f7f7f7;
+    border-bottom: 1px solid #f7f7f7;
 }
