@@ -43,6 +43,10 @@
     color: gray;
 }
 
+.font-color-lightgray {
+    color: lightgray;
+}
+
 .text-underline {
     text-decoration: underline;
 }
@@ -178,9 +182,13 @@ body {
     font-size: 9px;
 }
 
+#friend-list {
+    height: calc(95vh - 170px);
+    overflow-y: auto;
+}
+
 .friend-card {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-left: 15px;
     padding-top: 5px;
@@ -188,4 +196,23 @@ body {
     background-color: white;
     border-top: 1px solid #f7f7f7;
     border-bottom: 1px solid #f7f7f7;
+}
+
+.friend-profile-icon {
+    flex: 0 0 25%;
+}
+
+.friend-details {
+    display: flex;
+    justify-content: space-around;
+    flex: 0 0 75%;
+
+}
+
+#friend-last-message {
+    padding-top: 5px;
+}
+
+.message-received {
+
 }
