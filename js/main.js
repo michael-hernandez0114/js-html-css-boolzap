@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+    $("#search-friends").keyup(function(event){
+        var searchFilter = $(this).val().toLowerCase();
+        //console.log(searchFilter);
+
+        $("#friend-list .friend-card").find("#friend-name").each(function() {
+            console.log($(this).text());
+        });
+    })
+
     $(".new-message").focus(function() {
         $(".send-reply .fa-paper-plane").toggleClass("fas fa-paper-plane fa fa-microphone");
     })
