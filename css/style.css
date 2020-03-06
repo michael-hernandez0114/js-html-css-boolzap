@@ -255,21 +255,25 @@ body {
 
 }
 
-.wrapper-friend {
+.template {
+    display: none;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.friend-side {
     align-items: flex-start;
-    margin-bottom: 10px;
 }
 
-.wrapper-user {
-    display: flex;
-    flex-direction: column;
+.user-side {
     align-items: flex-end;
-    margin-bottom: 10px;
 }
 
-.chat-friend {
+.chat {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -281,18 +285,13 @@ body {
     max-width: 20vw;
 }
 
+.friend-color {
+    background-color: white;
+}
 
-
-.chat-user {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
+.user-color {
     background-color: #DCF8C6;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    max-width: 20vw;
+
 }
 
 .messaggio {
