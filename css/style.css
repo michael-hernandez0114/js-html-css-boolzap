@@ -318,7 +318,7 @@ body {
 }
 
 .emoticons,
-.microphone {
+.send-reply {
     width: 5vw;
     display: flex;
     justify-content: center;
