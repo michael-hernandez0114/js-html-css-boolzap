@@ -5,24 +5,21 @@ $(document).ready(function() {
 
     $(".new-message").keypress(function(event){
         if(event.keyCode == 13) {
-            messageText = $(".new-message").val()
-            console.log(messageText);
-            $(".new-message").val('');
-
-            newMessageObj = $(".template .wrapper").clone();
-
-            console.log(newMessageObj);
-
-            newMessageObj.find(".messaggio").text(messageText);
-            console.log(newMessageObj.find(".messaggio").text());
-            newMessageObj.addClass("user-side");
-            newMessageObj.children(".chat").addClass("user-color");
-            $("#chat-container").append(newMessageObj);
+            insertMessage();
 
 
         }
     })
-    //messageText = $(".new-message").text()
+
+    function insertMessage() {
+        messageText = $(".new-message").val()
+        $(".new-message").val('');
+        newMessageObj = $(".template .wrapper").clone();
+        newMessageObj.find(".messaggio").text(messageText);
+        newMessageObj.addClass("user-side");
+        newMessageObj.children(".chat").addClass("user-color");
+        $("#chat-container").append(newMessageObj);
+    }
 
 
 
