@@ -23,6 +23,19 @@ $(document).ready(function() {
         $(".send-reply .fa-microphone").toggleClass("fas fa-paper-plane fa fa-microphone");
     })
 
+    $(".friend-card").click(function(event) {
+        var user = $(this).data('conversation');
+        $("#chat-container .conversation").each(function(){
+            if(user == $(this).data('conversation')) {
+                $("#chat-container .conversation").hide();
+                $(this).show();
+            }
+        });
+        $(".friend-card").removeClass("active-friend");
+        $(this).addClass("active-friend");
+
+    });
+
     var messageText;
     var newMessageObj;
 

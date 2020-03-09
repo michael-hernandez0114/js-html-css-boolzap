@@ -40,13 +40,13 @@
                         </div>
                     </section>
                     <section id="friend-list">
-                        <div class="friend-card" data-conversation="0">
+                        <div class="friend-card active-friend" data-conversation="0">
                             <div class="friend-profile-icon">
                                 <img class="avatar-size" src="img/friend_laura.png" alt="">
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Maria</h4>
+                                    <h4 id="friend-name">Laura</h4>
                                     <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
@@ -156,10 +156,10 @@
                     <header id="top-bar" class="bg-color-lightgray">
                         <div id="friend-status">
                             <div class="friend-avatar">
-                                <img class="avatar-size" src="img/friend_ScaryDude.png" alt="">
+                                <img class="avatar-size" src="img/friend_laura.png" alt="">
                             </div>
                             <div id="friend-last-access">
-                                <h4>Scary</h4>
+                                <h4>Laura</h4>
                                 <p class="font-size-12 font-color-gray font-bold">Ultimo accesso oggi alle 15.40</p>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </header>
-                    <section id="chat-container" class="clearfix">
+                    <section id="chat-container">
                         <div class="template">
                             <div class="wrapper">
                                 <div class="chat">
@@ -178,37 +178,186 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="wrapper user-side">
-                            <div class="chat user-color">
-                                <span class="messaggio">Ciao come stai?</span>
-                                <span class="orario">07.15</span>
+                        <div class="conversation active" data-conversation="0">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai Laura?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="wrapper user-side">
-                            <div class="chat user-color">
-                                <span class="messaggio">Ciao come stai?</span>
-                                <span class="orario">07.15</span>
-                            </div>
-                        </div>
-                        <div class="wrapper friend-side">
-                            <div class="chat friend-color">
-                                <span class="messaggio">Ciao come stai?</span>
-                                <span class="orario">07.15</span>
-                            </div>
-                        </div>
-
-                        <!--
-                        <div class="wrapper-friend">
-                            <div class="chat-friend">
-
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
                                     <span class="messaggio">Ciao come stai?</span>
-
-                                <div class="orario-block">
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
                                     <span class="orario">07.15</span>
                                 </div>
                             </div>
                         </div>
-                        -->
+                        <div class="conversation" data-conversation="1">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai John?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conversation" data-conversation="2">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai John?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conversation" data-conversation="3">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai John?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conversation" data-conversation="4">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai John?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conversation" data-conversation="5">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai John?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conversation" data-conversation="6">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai John?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conversation" data-conversation="7">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai John?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="conversation" data-conversation="8">
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai Catty?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper user-side">
+                                <div class="chat user-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                            <div class="wrapper friend-side">
+                                <div class="chat friend-color">
+                                    <span class="messaggio">Ciao come stai?</span>
+                                    <span class="orario">07.15</span>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <section id="send-message" class="bg-color-lightgray">
                         <div class="emoticons icon-size-20 font-color-gray">
