@@ -2,12 +2,19 @@ $(document).ready(function() {
 
     $("#search-friends").keyup(function(event){
         var searchFilter = $(this).val().toLowerCase();
-        //console.log(searchFilter);
 
-        $("#friend-list .friend-card").find("#friend-name").each(function() {
-            console.log($(this).text());
+        $('.friend-card').each(function() {
+            var friend = $(this).find('#friend-name').text().toLowerCase();
+            //console.log(friend);
+            if(friend.includes(searchFilter)) {
+                $(this).show();
+            }
+            else {
+                $(this).hide();
+            }
         });
-    })
+
+    });
 
     $(".new-message").focus(function() {
         $(".send-reply .fa-paper-plane").toggleClass("fas fa-paper-plane fa fa-microphone");
