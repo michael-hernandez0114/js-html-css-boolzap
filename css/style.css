@@ -255,6 +255,7 @@ body {
     background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
     background-size: contain;
     padding: 30px 50px;
+    overflow-y: auto;
 }
 
 
@@ -296,6 +297,38 @@ body {
     padding-right: 10px;
     padding-bottom: 5px;
     max-width: 20vw;
+    position: relative;
+}
+
+.conversation-options {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.options {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    background-color: white;
+    font-size: 10px;
+    z-index: 10;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.chat:hover .conversation-options {
+    display: block;
+}
+
+.chat:after:hover {
+    content: 'f0d7';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
 }
 
 .friend-color {

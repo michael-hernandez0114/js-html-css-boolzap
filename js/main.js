@@ -25,6 +25,9 @@ $(document).ready(function() {
 
     $(".friend-card").click(function(event) {
         var user = $(this).data('conversation');
+        var iconSrc = $(this).find('img').attr('src');
+        var currentUser = $(this).find('h4').text();
+
         $("#chat-container .conversation").each(function(){
             if(user == $(this).data('conversation')) {
 
@@ -32,6 +35,8 @@ $(document).ready(function() {
                 //$(this).show();
                 $("#chat-container .conversation").removeClass("active");
                 $(this).addClass("active");
+                $("#friend-status").find('img').attr('src', iconSrc);
+                $("#friend-status").find('h4').text(currentUser);
             }
         });
         // change friend card to selected card by click
@@ -44,12 +49,31 @@ $(document).ready(function() {
     $(".new-message").keypress(function(event){
         if(event.keyCode == 13) {
             insertUserMessage();
+            scroll();
             setTimeout(insertFriendMessage, 1000);
+
         }
     })
     $(".fa-paper-plane").click(function(event){
             insertUserMessage();
+            scroll();
             setTimeout(insertFriendMessage, 1000);
+
+
+    })
+
+    $(".conversation-options").click(function(event) {
+        //$(".options").toggleClass("hidden");
+
+        $(this).next().toggleClass("hidden");
+
+        $("#delete-message").click(function(event) {
+            //console.log($(this).closest("div.wrapper"));
+            console.log($(this).parent().parent().parent());
+            //console.log($(this).parents().find(".wrapper"));
+            $(this).closest("div.wrapper").hide();
+            //$(this).parent().parent().parent().hide();
+        })
     })
 
 
@@ -66,6 +90,7 @@ $(document).ready(function() {
         newMessageObj.children(".chat").addClass("user-color");
 
         $(".conversation.active").append(newMessageObj);
+        scroll();
 
     }
 
@@ -80,11 +105,15 @@ $(document).ready(function() {
         newMessageObj.children(".chat").addClass("friend-color");
 
         $(".conversation.active").append(newMessageObj);
+        scroll();
 
         //$("#chat-container").append(newMessageObj);
     }
 
-
+    function scroll() {
+        var scrollDown = $(".conversation.active").height();
+        $(".conversation.active").scrollTop(scrollDown);
+    }
 
 
 
