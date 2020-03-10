@@ -54,7 +54,7 @@ $(document).ready(function() {
 
         }
     })
-    $(".fa-paper-plane").click(function(event){
+    $(".fa-paper-plane").on('click', function(event){
             insertUserMessage();
             scroll();
             setTimeout(insertFriendMessage, 1000);
@@ -62,18 +62,20 @@ $(document).ready(function() {
 
     })
 
-    $(".conversation-options").click(function(event) {
-        //$(".options").toggleClass("hidden");
+    $("#chat-container").on('click', '.conversation-options', function(event){
 
+        //$(".options").toggleClass("hidden");
+        $(".conversation-options").next().addClass("hidden");
+        //console.log('clicked on arrow');
         $(this).next().toggleClass("hidden");
 
-        $("#delete-message").click(function(event) {
-            //console.log($(this).closest("div.wrapper"));
-            console.log($(this).parent().parent().parent());
-            //console.log($(this).parents().find(".wrapper"));
-            $(this).closest("div.wrapper").hide();
-            //$(this).parent().parent().parent().hide();
-        })
+
+
+    })
+    $("#chat-container").on('click', '.delete-message', function(event) {
+        //console.log("i clicked");
+        $(this).closest(".wrapper").hide();
+
     })
 
 
