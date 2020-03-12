@@ -64,9 +64,13 @@ $(document).ready(function() {
 
     $("#chat-container").on('click', '.conversation-options', function(event){
 
-        //$(".options").toggleClass("hidden");
-        $(".conversation-options").next().addClass("hidden");
+        //$(".options").addClass("hidden");
+        $('.conversation-options').not(this).siblings('.options').addClass('hidden');
+        //if (!$(".conversation-options").hasClass("hidden")) {
+        //$(".conversation-options").next().addClass("hidden");
+        //}
         //console.log('clicked on arrow');
+        //$(this).next().toggleClass("hidden");
         $(this).next().toggleClass("hidden");
 
 
@@ -80,16 +84,27 @@ $(document).ready(function() {
 
 
     function insertUserMessage() {
-        var messageText;
+        //var messageText;
+
         var newMessageObj;
         var getConversationBlock;
 
-        messageText = $(".new-message").val()
+        var source = $('#messaggio-template').html();
+        var template = Handlebars.compile(source);
+
+        var messaggioObj = {
+            testoMessaggio : $(".new-message").val(),
+            direzione : 'user-side',
+            colore : 'user-color'
+        };
+
+        newMessageObj = template(messaggioObj);
+        //messageText = $(".new-message").val()
         $(".new-message").val('');
-        newMessageObj = $(".template .wrapper").clone();
-        newMessageObj.find(".messaggio").text(messageText);
-        newMessageObj.addClass("user-side");
-        newMessageObj.children(".chat").addClass("user-color");
+        //newMessageObj = $(".template .wrapper").clone();
+        //newMessageObj.find(".messaggio").text(messageText);
+        //newMessageObj.addClass("user-side");
+        //newMessageObj.children(".chat").addClass("user-color");
 
         $(".conversation.active").append(newMessageObj);
         scroll();
@@ -100,11 +115,22 @@ $(document).ready(function() {
         var messageText;
         var newMessageObj;
 
-        messageText = "ok";
-        newMessageObj = $(".template .wrapper").clone();
-        newMessageObj.find(".messaggio").text(messageText);
-        newMessageObj.addClass("friend-side");
-        newMessageObj.children(".chat").addClass("friend-color");
+        var source = $('#messaggio-template').html();
+        var template = Handlebars.compile(source);
+
+        var messaggioObj = {
+            testoMessaggio : 'ok',
+            direzione : 'friend-side',
+            colore : 'friend-color'
+        };
+
+        newMessageObj = template(messaggioObj);
+
+        //messageText = "ok";
+        //newMessageObj = $(".template .wrapper").clone();
+        //newMessageObj.find(".messaggio").text(messageText);
+        //newMessageObj.addClass("friend-side");
+        //newMessageObj.children(".chat").addClass("friend-color");
 
         $(".conversation.active").append(newMessageObj);
         scroll();
