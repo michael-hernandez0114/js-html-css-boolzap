@@ -41,14 +41,29 @@
                         </div>
                     </section>
                     <section id="friend-list">
+                        <script id="friend-card-template" type="text/x-handlebars-template">
+                            <div class="friend-card" data-conversation="{{friendID}}">
+                                <div class="friend-profile-icon">
+                                    <img class="avatar-size" src="{{friendAvatar}}" alt="">
+                                </div>
+                                <div class="friend-details">
+                                    <div class="name-last-message">
+                                        <h4 class="friend-name">{{friendName}}</h4>
+                                        <p class="friend-last-message" class="font-size-12 font-color-lightgray">{{friendLastMessage}}</p>
+                                    </div>
+                                    <div class="message-received font-size-14"><p class="font-color-lightgray">{{messageTimeStamp}}</p></div>
+                                </div>
+                            </div>
+                        </script>
+                        <!--
                         <div class="friend-card active-friend" data-conversation="0">
                             <div class="friend-profile-icon">
                                 <img class="avatar-size" src="img/friend_laura.png" alt="">
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Laura</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Laura</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -59,8 +74,8 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">John</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">John</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -71,8 +86,8 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Goof</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Goof</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -83,8 +98,8 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Scary</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Scary</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -95,8 +110,8 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Silly</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Silly</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -107,8 +122,8 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Sammy</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Sammy</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -119,8 +134,8 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Peachy</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Peachy</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -131,8 +146,8 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Alex</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Alex</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
@@ -143,12 +158,13 @@
                             </div>
                             <div class="friend-details">
                                 <div class="name-last-message">
-                                    <h4 id="friend-name">Catty</h4>
-                                    <p id="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
+                                    <h4 class="friend-name">Catty</h4>
+                                    <p class="friend-last-message" class="font-size-12 font-color-lightgray">Non poteva essere altrimenti</p>
                                 </div>
                                 <div class="message-received font-size-14"><p class="font-color-lightgray">17:53</p></div>
                             </div>
                         </div>
+                        -->
                     </section>
 
 

@@ -1,5 +1,112 @@
 $(document).ready(function() {
 
+    var source = $('#friend-card-template').html();
+    var template = Handlebars.compile(source);
+
+    var friendCards = {
+        f0:
+            [
+            {
+                friendID: 0,
+                friendAvatar: 'img/friend_laura.png',
+                friendName: 'Laura',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f1:
+            [
+            {
+                friendID: 1,
+                friendAvatar: 'img/friend_john.png',
+                friendName: 'John',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f2:
+            [
+            {
+                friendID: 2,
+                friendAvatar: 'img/friend_goof.png',
+                friendName: 'Goof',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f3:
+            [
+            {
+                friendID: 1,
+                friendAvatar: 'img/friend_ScaryDude.png',
+                friendName: 'Scary',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f4:
+            [
+            {
+                friendID: 1,
+                friendAvatar: 'img/friend_silly.png',
+                friendName: 'Silly',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f5:
+            [
+            {
+                friendID: 1,
+                friendAvatar: 'img/friend_sammy.png',
+                friendName: 'Sammy',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f6:
+            [
+            {
+                friendID: 1,
+                friendAvatar: 'img/friend_peachy.png',
+                friendName: 'Peachy',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f7:
+            [
+            {
+                friendID: 1,
+                friendAvatar: 'img/friend_alex.png',
+                friendName: 'Alex',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+        f8:
+            [
+            {
+                friendID: 1,
+                friendAvatar: 'img/friend_catty.png',
+                friendName: 'Catty',
+                friendLastMessage: 'Non poteva essere altriment',
+                messageTimeStamp: '17:53'
+            }
+            ],
+    };
+
+    for (var key in friendCards) {
+        console.log("key.length is: " + key.length);
+        for (var i = 0; i < key.length - 1; i++) {
+            //console.log("first: " + friendCards[key]);
+            console.log( friendCards[key][i]);
+            var templateFriendCard = template(friendCards[key][i]);
+            $('#friend-list').append(templateFriendCard);
+        }
+    }
+
+
     $("#search-friends").keyup(function(event){
         var searchFilter = $(this).val().toLowerCase();
 
