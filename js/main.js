@@ -37,7 +37,7 @@ $(document).ready(function() {
         f3:
             [
             {
-                friendID: 1,
+                friendID: 3,
                 friendAvatar: 'img/friend_ScaryDude.png',
                 friendName: 'Scary',
                 friendLastMessage: 'Non poteva essere altriment',
@@ -47,7 +47,7 @@ $(document).ready(function() {
         f4:
             [
             {
-                friendID: 1,
+                friendID: 4,
                 friendAvatar: 'img/friend_silly.png',
                 friendName: 'Silly',
                 friendLastMessage: 'Non poteva essere altriment',
@@ -57,7 +57,7 @@ $(document).ready(function() {
         f5:
             [
             {
-                friendID: 1,
+                friendID: 5,
                 friendAvatar: 'img/friend_sammy.png',
                 friendName: 'Sammy',
                 friendLastMessage: 'Non poteva essere altriment',
@@ -67,7 +67,7 @@ $(document).ready(function() {
         f6:
             [
             {
-                friendID: 1,
+                friendID: 6,
                 friendAvatar: 'img/friend_peachy.png',
                 friendName: 'Peachy',
                 friendLastMessage: 'Non poteva essere altriment',
@@ -77,7 +77,7 @@ $(document).ready(function() {
         f7:
             [
             {
-                friendID: 1,
+                friendID: 7,
                 friendAvatar: 'img/friend_alex.png',
                 friendName: 'Alex',
                 friendLastMessage: 'Non poteva essere altriment',
@@ -87,7 +87,7 @@ $(document).ready(function() {
         f8:
             [
             {
-                friendID: 1,
+                friendID: 8,
                 friendAvatar: 'img/friend_catty.png',
                 friendName: 'Catty',
                 friendLastMessage: 'Non poteva essere altriment',
