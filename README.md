@@ -42,10 +42,14 @@ Enter any string on the search bar to display results. Below are a few examples.
 
 ### Sending a Message
 
-Using enter or the Submit button will display the results. Search criteria will clear after each submission.
+Easily send any friend a message by first selecting them on the friend list. They are marked red when active. Write a message and press enter on the keyboard. After 1 second delay, an automated response will appear.
 
+![GitHub Logo](/img/readme/sampleMessage1.png)
+![GitHub Logo](/img/readme/sampleMessage2.png)
 
+### Removing Messages
 
-### Hover Over Individual Film/TV Series
+It is also possible to go to any individual message per user and delete it. Upon hovering on a message, an arrow icon will appear. Here, you can choose "Delete Message" and the specific message will be deleted from the conversation.
 
-Hover over each item to see details such as an overview and rating.
+![GitHub Logo](/img/readme/deleteMessagePopUp.png)
+![GitHub Logo](/img/readme/deleteMessageDone.png)
