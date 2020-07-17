@@ -97,10 +97,10 @@ $(document).ready(function() {
     };
 
     for (var key in friendCards) {
-        console.log("key.length is: " + key.length);
+        //console.log("key.length is: " + key.length);
         for (var i = 0; i < key.length - 1; i++) {
             //console.log("first: " + friendCards[key]);
-            console.log( friendCards[key][i]);
+            //console.log( friendCards[key][i]);
             var templateFriendCard = template(friendCards[key][i]);
             $('#friend-list').append(templateFriendCard);
         }
@@ -111,7 +111,7 @@ $(document).ready(function() {
         var searchFilter = $(this).val().toLowerCase();
 
         $('.friend-card').each(function() {
-            var friend = $(this).find('#friend-name').text().toLowerCase();
+            var friend = $(this).find('.friend-name').text().toLowerCase();
             //console.log(friend);
             if(friend.includes(searchFilter)) {
                 $(this).show();
